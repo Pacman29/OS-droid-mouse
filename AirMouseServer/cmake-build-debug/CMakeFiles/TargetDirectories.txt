@@ -1,0 +1,3 @@
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/cmake-build-debug/CMakeFiles/AirMouseServer.dir

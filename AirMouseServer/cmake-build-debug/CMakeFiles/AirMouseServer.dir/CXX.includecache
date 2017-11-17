@@ -1,0 +1,228 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/ByteBuffer.h
+cstdlib
+-
+cstdint
+-
+cstring
+-
+vector
+-
+memory
+-
+iostream
+-
+cstdio
+-
+
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/DiscoveryServer.cpp
+DiscoveryServer.h
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/DiscoveryServer.h
+
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/DiscoveryServer.h
+string
+-
+sstream
+-
+cstring
+-
+exception
+-
+stdexcept
+-
+iostream
+-
+thread
+-
+unistd.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+arpa/inet.h
+-
+
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/KeepAliveMessage.h
+Message.h
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/Message.h
+
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/KeyDownMessage.h
+Message.h
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/Message.h
+
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/KeyUpMessage.h
+Message.h
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/Message.h
+
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/Message.cpp
+Message.h
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/Message.h
+
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/Message.h
+string
+-
+sstream
+-
+functional
+-
+iostream
+-
+vector
+-
+memory
+-
+VirtualInput.h
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/VirtualInput.h
+ByteBuffer.h
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/ByteBuffer.h
+
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/MessageFactory.h
+Message.h
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/Message.h
+MouseMoveMessage.h
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/MouseMoveMessage.h
+MouseScrollMessage.h
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/MouseScrollMessage.h
+MouseClickMessage.h
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/MouseClickMessage.h
+KeepAliveMessage.h
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/KeepAliveMessage.h
+KeyUpMessage.h
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/KeyUpMessage.h
+KeyDownMessage.h
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/KeyDownMessage.h
+memory
+-
+iostream
+-
+
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/MouseClickMessage.h
+Message.h
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/Message.h
+
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/MouseMoveMessage.h
+iostream
+-
+Message.h
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/Message.h
+
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/MouseScrollMessage.h
+Message.h
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/Message.h
+
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/TcpServer.cpp
+TcpServer.h
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/TcpServer.h
+
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/TcpServer.h
+stdexcept
+-
+cstring
+-
+functional
+-
+iostream
+-
+memory
+-
+sys/types.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+arpa/inet.h
+-
+unistd.h
+-
+TcpSocket.h
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/TcpSocket.h
+
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/TcpSocket.cpp
+TcpSocket.h
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/TcpSocket.h
+
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/TcpSocket.h
+cstring
+-
+string
+-
+stdexcept
+-
+iostream
+-
+Message.h
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/Message.h
+MessageFactory.h
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/MessageFactory.h
+thread
+-
+memory
+-
+functional
+-
+sys/types.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+arpa/inet.h
+-
+unistd.h
+-
+
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/VirtualInput.cpp
+VirtualInput.h
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/VirtualInput.h
+
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/VirtualInput.h
+stdexcept
+-
+cstring
+-
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+fcntl.h
+-
+linux/input.h
+-
+linux/uinput.h
+-
+iostream
+-
+
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/main.cpp
+DiscoveryServer.h
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/DiscoveryServer.h
+TcpServer.h
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/TcpServer.h
+TcpSocket.h
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/TcpSocket.h
+Message.h
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/Message.h
+VirtualInput.h
+/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/VirtualInput.h
+vector
+-
+iostream
+-
+functional
+-
+memory
+-
+
