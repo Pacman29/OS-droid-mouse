@@ -46,15 +46,12 @@ public:
     void onKeyDown(jbyte key);
     void onKeyUp(jbyte key);
     
-    static jbyte javaKeyToInputKey(jbyte key);
     
 private:    
     bool _isOpen = false; 
     int fd;
     struct uinput_user_dev uidev;
     struct input_event ev[3];
-    
-    static jbyte keyMap[117];
 };
 
 #endif /* VIRTUALINPUT_H */

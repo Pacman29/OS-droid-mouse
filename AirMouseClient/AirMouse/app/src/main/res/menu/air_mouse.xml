@@ -3,12 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <group android:id="@+id/action_connected_server" android:checkableBehavior="none" android:visible="true">
         <item
-            android:id="@+id/action_toggle_keyboard"
-            android:orderInCategory="100"
-            android:title="@string/action_toggle_keyboard"
-            android:icon="@drawable/keyboard"
-            app:showAsAction="always" />
-        <item
             android:id="@+id/action_server_disconnect"
             android:orderInCategory="101"
             android:title="@string/action_server_disconnect"

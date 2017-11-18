@@ -8,8 +8,6 @@ set(SOURCE_FILES
         DiscoveryServer.cpp
         DiscoveryServer.h
         KeepAliveMessage.h
-        KeyDownMessage.h
-        KeyUpMessage.h
         main.cpp
         Message.cpp
         Message.h

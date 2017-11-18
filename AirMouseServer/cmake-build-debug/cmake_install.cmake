@@ -1,4 +1,4 @@
-# Install script for directory: /home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer
+# Install script for directory: /home/pacman29/OS-droid-mouse/AirMouseServer
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/pacman29/OS-droid-mouse/AirMouseServer/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

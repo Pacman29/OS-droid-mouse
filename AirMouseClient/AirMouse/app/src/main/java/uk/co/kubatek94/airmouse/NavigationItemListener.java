@@ -14,5 +14,4 @@ public interface NavigationItemListener {
     ConnectedServerManager getConnectedServerManager();
     CoordinatorLayout getCoordinatorLayout();
     void clearBackstack();
-    KeyboardManager getKeyboardManager();
 }

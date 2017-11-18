@@ -11,8 +11,6 @@ CMakeFiles/AirMouseServer.dir/Message.cpp.o: ../VirtualInput.h
 
 CMakeFiles/AirMouseServer.dir/TcpServer.cpp.o: ../ByteBuffer.h
 CMakeFiles/AirMouseServer.dir/TcpServer.cpp.o: ../KeepAliveMessage.h
-CMakeFiles/AirMouseServer.dir/TcpServer.cpp.o: ../KeyDownMessage.h
-CMakeFiles/AirMouseServer.dir/TcpServer.cpp.o: ../KeyUpMessage.h
 CMakeFiles/AirMouseServer.dir/TcpServer.cpp.o: ../Message.h
 CMakeFiles/AirMouseServer.dir/TcpServer.cpp.o: ../MessageFactory.h
 CMakeFiles/AirMouseServer.dir/TcpServer.cpp.o: ../MouseClickMessage.h
@@ -25,8 +23,6 @@ CMakeFiles/AirMouseServer.dir/TcpServer.cpp.o: ../VirtualInput.h
 
 CMakeFiles/AirMouseServer.dir/TcpSocket.cpp.o: ../ByteBuffer.h
 CMakeFiles/AirMouseServer.dir/TcpSocket.cpp.o: ../KeepAliveMessage.h
-CMakeFiles/AirMouseServer.dir/TcpSocket.cpp.o: ../KeyDownMessage.h
-CMakeFiles/AirMouseServer.dir/TcpSocket.cpp.o: ../KeyUpMessage.h
 CMakeFiles/AirMouseServer.dir/TcpSocket.cpp.o: ../Message.h
 CMakeFiles/AirMouseServer.dir/TcpSocket.cpp.o: ../MessageFactory.h
 CMakeFiles/AirMouseServer.dir/TcpSocket.cpp.o: ../MouseClickMessage.h
@@ -42,8 +38,6 @@ CMakeFiles/AirMouseServer.dir/VirtualInput.cpp.o: ../VirtualInput.h
 CMakeFiles/AirMouseServer.dir/main.cpp.o: ../ByteBuffer.h
 CMakeFiles/AirMouseServer.dir/main.cpp.o: ../DiscoveryServer.h
 CMakeFiles/AirMouseServer.dir/main.cpp.o: ../KeepAliveMessage.h
-CMakeFiles/AirMouseServer.dir/main.cpp.o: ../KeyDownMessage.h
-CMakeFiles/AirMouseServer.dir/main.cpp.o: ../KeyUpMessage.h
 CMakeFiles/AirMouseServer.dir/main.cpp.o: ../Message.h
 CMakeFiles/AirMouseServer.dir/main.cpp.o: ../MessageFactory.h
 CMakeFiles/AirMouseServer.dir/main.cpp.o: ../MouseClickMessage.h

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/ByteBuffer.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/ByteBuffer.h
 cstdlib
 -
 cstdint
@@ -22,11 +22,11 @@ iostream
 cstdio
 -
 
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/DiscoveryServer.cpp
+/home/pacman29/OS-droid-mouse/AirMouseServer/DiscoveryServer.cpp
 DiscoveryServer.h
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/DiscoveryServer.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/DiscoveryServer.h
 
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/DiscoveryServer.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/DiscoveryServer.h
 string
 -
 sstream
@@ -52,23 +52,15 @@ netinet/in.h
 arpa/inet.h
 -
 
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/KeepAliveMessage.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/KeepAliveMessage.h
 Message.h
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/Message.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/Message.h
 
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/KeyDownMessage.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/Message.cpp
 Message.h
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/Message.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/Message.h
 
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/KeyUpMessage.h
-Message.h
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/Message.h
-
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/Message.cpp
-Message.h
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/Message.h
-
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/Message.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/Message.h
 string
 -
 sstream
@@ -82,49 +74,45 @@ vector
 memory
 -
 VirtualInput.h
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/VirtualInput.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/VirtualInput.h
 ByteBuffer.h
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/ByteBuffer.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/ByteBuffer.h
 
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/MessageFactory.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/MessageFactory.h
 Message.h
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/Message.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/Message.h
 MouseMoveMessage.h
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/MouseMoveMessage.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/MouseMoveMessage.h
 MouseScrollMessage.h
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/MouseScrollMessage.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/MouseScrollMessage.h
 MouseClickMessage.h
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/MouseClickMessage.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/MouseClickMessage.h
 KeepAliveMessage.h
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/KeepAliveMessage.h
-KeyUpMessage.h
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/KeyUpMessage.h
-KeyDownMessage.h
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/KeyDownMessage.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/KeepAliveMessage.h
 memory
 -
 iostream
 -
 
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/MouseClickMessage.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/MouseClickMessage.h
 Message.h
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/Message.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/Message.h
 
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/MouseMoveMessage.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/MouseMoveMessage.h
 iostream
 -
 Message.h
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/Message.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/Message.h
 
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/MouseScrollMessage.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/MouseScrollMessage.h
 Message.h
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/Message.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/Message.h
 
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/TcpServer.cpp
+/home/pacman29/OS-droid-mouse/AirMouseServer/TcpServer.cpp
 TcpServer.h
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/TcpServer.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/TcpServer.h
 
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/TcpServer.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/TcpServer.h
 stdexcept
 -
 cstring
@@ -146,13 +134,13 @@ arpa/inet.h
 unistd.h
 -
 TcpSocket.h
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/TcpSocket.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/TcpSocket.h
 
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/TcpSocket.cpp
+/home/pacman29/OS-droid-mouse/AirMouseServer/TcpSocket.cpp
 TcpSocket.h
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/TcpSocket.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/TcpSocket.h
 
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/TcpSocket.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/TcpSocket.h
 cstring
 -
 string
@@ -162,9 +150,9 @@ stdexcept
 iostream
 -
 Message.h
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/Message.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/Message.h
 MessageFactory.h
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/MessageFactory.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/MessageFactory.h
 thread
 -
 memory
@@ -182,11 +170,11 @@ arpa/inet.h
 unistd.h
 -
 
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/VirtualInput.cpp
+/home/pacman29/OS-droid-mouse/AirMouseServer/VirtualInput.cpp
 VirtualInput.h
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/VirtualInput.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/VirtualInput.h
 
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/VirtualInput.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/VirtualInput.h
 stdexcept
 -
 cstring
@@ -206,17 +194,17 @@ linux/uinput.h
 iostream
 -
 
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/main.cpp
+/home/pacman29/OS-droid-mouse/AirMouseServer/main.cpp
 DiscoveryServer.h
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/DiscoveryServer.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/DiscoveryServer.h
 TcpServer.h
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/TcpServer.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/TcpServer.h
 TcpSocket.h
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/TcpSocket.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/TcpSocket.h
 Message.h
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/Message.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/Message.h
 VirtualInput.h
-/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/VirtualInput.h
+/home/pacman29/OS-droid-mouse/AirMouseServer/VirtualInput.h
 vector
 -
 iostream

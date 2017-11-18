@@ -18,7 +18,6 @@ public class AirMouse extends AppCompatActivity implements NavigationView.OnNavi
     private HashMap<Integer, NavigationItem> navigationItems = new HashMap<>();
     private NavigationItem currentNavigationItem = null;
 
-    private KeyboardManager keyboardManager = null;
     private NavigationView navigationView = null;
     private Toolbar toolbar = null;
 
@@ -34,9 +33,7 @@ public class AirMouse extends AppCompatActivity implements NavigationView.OnNavi
         setSupportActionBar(toolbar);
 
         navigationItems.put(R.id.item_servers, new ServersFragment());
-        navigationItems.put(R.id.item_connected_server_airremote, new AirRemoteFragment());
         navigationItems.put(R.id.item_connected_server_touchpad, new TouchPadFragment());
-        navigationItems.put(R.id.item_connected_server_settings, new SettingsFragment());
 
         coordinatorLayout = (CoordinatorLayout) findViewById(R.id.air_mouse_activity);
 
@@ -62,7 +59,6 @@ public class AirMouse extends AppCompatActivity implements NavigationView.OnNavi
         }
 
         connectedServerManager = new ConnectedServerManager(this, (ServersFragment) navigationItems.get(R.id.item_servers));
-        keyboardManager = new KeyboardManager(this);
     }
 
     @Override
@@ -144,7 +140,4 @@ public class AirMouse extends AppCompatActivity implements NavigationView.OnNavi
         return coordinatorLayout;
     }
 
-    public KeyboardManager getKeyboardManager() {
-        return keyboardManager;
-    }
 }

@@ -18,7 +18,6 @@ public class TouchPadView extends EditText {
     protected OnKeyDownListener onKeyDownListener;
     protected OnKeyUpListener onKeyUpListener;
 
-    protected OnKeyboardHideListener onKeyboardHideListener;
     protected OnMoveListener onMoveListener;
     protected OnScrollListener onScrollListener;
     protected OnClickListener onClickListener;
@@ -185,17 +184,6 @@ public class TouchPadView extends EditText {
         return super.onKeyMultiple(keyCode, repeatCount, event);
     }
 
-    /* override to hide keyboard when back key is pressed */
-    @Override
-    public boolean onKeyPreIme(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_UP) {
-            if (onKeyboardHideListener != null) {
-                onKeyboardHideListener.onKeyboardHide();
-            }
-        }
-
-        return super.onKeyPreIme(keyCode, event);
-    }
 
     /** Set listeners here */
     public void setOnKeyDownListener(OnKeyDownListener listener) {
@@ -218,7 +206,6 @@ public class TouchPadView extends EditText {
         onClickListener = listener;
     }
 
-    public void setOnKeyboardHideListener(OnKeyboardHideListener listener) { onKeyboardHideListener = listener; }
     /**
      *  Functional interfaces for all events.
      *  Single event per interface, so that lambda functions can be used.

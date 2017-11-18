@@ -19,8 +19,6 @@
 #include "MouseScrollMessage.h"
 #include "MouseClickMessage.h"
 #include "KeepAliveMessage.h"
-#include "KeyUpMessage.h"
-#include "KeyDownMessage.h"
 
 #include <memory>
 #include <iostream>
@@ -41,8 +39,6 @@ namespace Message {
                 case Message::Type::MOUSE_MOVE: return std::unique_ptr<Message>(new MouseMoveMessage());
                 case Message::Type::MOUSE_SCROLL: return std::unique_ptr<Message>(new MouseScrollMessage());
                 case Message::Type::MOUSE_CLICK: return std::unique_ptr<Message>(new MouseClickMessage());
-                case Message::Type::KEYUP: return std::unique_ptr<Message>(new KeyUpMessage());
-                case Message::Type::KEYDOWN: return std::unique_ptr<Message>(new KeyDownMessage());
                 case Message::Type::KEEP_ALIVE: return std::unique_ptr<Message>(new KeepAliveMessage());
 
                 default:

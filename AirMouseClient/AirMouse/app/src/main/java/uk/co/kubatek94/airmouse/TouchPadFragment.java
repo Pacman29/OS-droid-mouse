@@ -18,8 +18,6 @@ import uk.co.kubatek94.airmouse.view.TouchPadView;
 public class TouchPadFragment extends NavigationItem {
     private TouchPadView touchPad;
 
-    private KeyboardManager keyboardManager;
-    private MenuItem keyboardItem;
 
     private Server connectedServer;
 
@@ -37,16 +35,11 @@ public class TouchPadFragment extends NavigationItem {
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.air_mouse, menu);
         super.onCreateOptionsMenu(menu, inflater);
-        keyboardItem = menu.findItem(R.id.action_toggle_keyboard);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_toggle_keyboard:
-                keyboardManager.toggleKeyboard(touchPad);
-                return true;
-
             case R.id.action_server_disconnect:
                 connectedServer.disconnect();
                 return true;
@@ -60,8 +53,6 @@ public class TouchPadFragment extends NavigationItem {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_touch_pad, container, false);
 
-        keyboardManager = listener.getKeyboardManager();
-
         touchPad = (TouchPadView) view.findViewById(R.id.touchPadView);
 
         touchPad.setOnKeyDownListener(key -> connectedServer.sendMessage(new KeyDownMessage(key)));
@@ -73,8 +64,6 @@ public class TouchPadFragment extends NavigationItem {
         touchPad.setOnScrollListener(value -> connectedServer.sendMessage(new MouseScrollMessage(value)));
 
         touchPad.setOnClickListener((TouchPadView.OnClickListener.Button button) -> connectedServer.sendMessage(new MouseClickMessage(button)));
-
-        touchPad.setOnKeyboardHideListener(() -> keyboardManager.hideKeyboard());
 
         return view;
     }
@@ -89,16 +78,11 @@ public class TouchPadFragment extends NavigationItem {
         touchPad.setSensitivity(settings.touchPadSensitivity.getValue());
         touchPad.setScrollDelay(settings.scrollDelay.getValue());
 
-        //change keyboard icon, when keyboard opens or closes
-        keyboardManager.setOnKeyboardShowListener(() -> keyboardItem.setIcon(R.drawable.keyboard_off));
-        keyboardManager.setOnKeyboardHideListener(() -> keyboardItem.setIcon(R.drawable.keyboard));
     }
 
     @Override
     public void onStop() {
         super.onStop();
         connectedServer = null;
-        keyboardManager.setOnKeyboardShowListener(null);
-        keyboardManager.setOnKeyboardHideListener(null);
     }
 }

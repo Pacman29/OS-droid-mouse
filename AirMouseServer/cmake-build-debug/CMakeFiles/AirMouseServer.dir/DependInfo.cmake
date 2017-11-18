@@ -4,12 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/DiscoveryServer.cpp" "/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/cmake-build-debug/CMakeFiles/AirMouseServer.dir/DiscoveryServer.cpp.o"
-  "/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/Message.cpp" "/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/cmake-build-debug/CMakeFiles/AirMouseServer.dir/Message.cpp.o"
-  "/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/TcpServer.cpp" "/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/cmake-build-debug/CMakeFiles/AirMouseServer.dir/TcpServer.cpp.o"
-  "/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/TcpSocket.cpp" "/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/cmake-build-debug/CMakeFiles/AirMouseServer.dir/TcpSocket.cpp.o"
-  "/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/VirtualInput.cpp" "/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/cmake-build-debug/CMakeFiles/AirMouseServer.dir/VirtualInput.cpp.o"
-  "/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/main.cpp" "/home/pacman29/Рабочий стол/OS KURS/AirMouse/AirMouseServer/cmake-build-debug/CMakeFiles/AirMouseServer.dir/main.cpp.o"
+  "/home/pacman29/OS-droid-mouse/AirMouseServer/DiscoveryServer.cpp" "/home/pacman29/OS-droid-mouse/AirMouseServer/cmake-build-debug/CMakeFiles/AirMouseServer.dir/DiscoveryServer.cpp.o"
+  "/home/pacman29/OS-droid-mouse/AirMouseServer/Message.cpp" "/home/pacman29/OS-droid-mouse/AirMouseServer/cmake-build-debug/CMakeFiles/AirMouseServer.dir/Message.cpp.o"
+  "/home/pacman29/OS-droid-mouse/AirMouseServer/TcpServer.cpp" "/home/pacman29/OS-droid-mouse/AirMouseServer/cmake-build-debug/CMakeFiles/AirMouseServer.dir/TcpServer.cpp.o"
+  "/home/pacman29/OS-droid-mouse/AirMouseServer/TcpSocket.cpp" "/home/pacman29/OS-droid-mouse/AirMouseServer/cmake-build-debug/CMakeFiles/AirMouseServer.dir/TcpSocket.cpp.o"
+  "/home/pacman29/OS-droid-mouse/AirMouseServer/VirtualInput.cpp" "/home/pacman29/OS-droid-mouse/AirMouseServer/cmake-build-debug/CMakeFiles/AirMouseServer.dir/VirtualInput.cpp.o"
+  "/home/pacman29/OS-droid-mouse/AirMouseServer/main.cpp" "/home/pacman29/OS-droid-mouse/AirMouseServer/cmake-build-debug/CMakeFiles/AirMouseServer.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
