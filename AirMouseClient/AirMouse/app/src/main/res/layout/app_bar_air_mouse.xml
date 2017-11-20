@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:id="@+id/air_mouse_activity"
-    tools:context="uk.co.kubatek94.airmouse.AirMouse">
+    tools:context="iu7.kurs.pacman29.mouse.MainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
