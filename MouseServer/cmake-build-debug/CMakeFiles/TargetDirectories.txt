@@ -1,0 +1,3 @@
+/home/pacman29/OS-droid-mouse/MouseServer/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/pacman29/OS-droid-mouse/MouseServer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/pacman29/OS-droid-mouse/MouseServer/cmake-build-debug/CMakeFiles/MouseServer.dir

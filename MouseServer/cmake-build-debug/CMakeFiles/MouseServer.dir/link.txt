@@ -1,0 +1,1 @@
+g++  -std=c++11 -g -Wall -pthread -g   CMakeFiles/MouseServer.dir/DiscoveryServer.cpp.o CMakeFiles/MouseServer.dir/main.cpp.o CMakeFiles/MouseServer.dir/Message.cpp.o CMakeFiles/MouseServer.dir/TcpServer.cpp.o CMakeFiles/MouseServer.dir/TcpSocket.cpp.o CMakeFiles/MouseServer.dir/VirtualInput.cpp.o  -o MouseServer 
