@@ -1,14 +1,11 @@
 
 
+#include <sys/stat.h>
 #include "VirtualInput.h"
 
 VirtualInput::VirtualInput() {
-    memset(&uidev, 0, sizeof(uidev));
-    snprintf(uidev.name, UINPUT_MAX_NAME_SIZE, "virtual-input");
-    uidev.id.bustype = BUS_USB;
-    uidev.id.vendor  = 0x1;
-    uidev.id.product = 0x1;
-    uidev.id.version = 1;
+    mouseFd = 0;
+    mouseFilePath = "/dev/avms";
 }
 
 VirtualInput::~VirtualInput() {
@@ -16,128 +13,60 @@ VirtualInput::~VirtualInput() {
 }
 
 bool VirtualInput::openDevice() {
-    fd = open("/dev/uinput", O_WRONLY | O_NONBLOCK);
-    if (fd < 0) {
-        return false;
+    struct stat st;
+    if ( stat(mouseFilePath, &st) != 0 ) {
+        dev_t dev = makedev(60, 0);
+        if ( mknod(mouseFilePath, S_IFCHR | S_IWUSR, dev) == -1 ) {
+            return false;
+        }
     }
 
-    ioctl(fd, UI_SET_EVBIT, EV_KEY);
-    
-    ioctl(fd, UI_SET_EVBIT, EV_REL);
-    ioctl(fd, UI_SET_EVBIT, EV_SYN);
-
-    ioctl(fd, UI_SET_RELBIT, REL_X);
-    ioctl(fd, UI_SET_RELBIT, REL_Y);
-    ioctl(fd, UI_SET_RELBIT, REL_WHEEL);
-
-    ioctl(fd, UI_SET_KEYBIT, BTN_LEFT);
-    ioctl(fd, UI_SET_KEYBIT, BTN_RIGHT);
-    ioctl(fd, UI_SET_KEYBIT, BTN_MIDDLE);
-
-    if(write(fd, &uidev, sizeof(uidev)) < 0) {
+    if ( (mouseFd = open(mouseFilePath, O_WRONLY)) == -1 ) {
         return false;
     }
-
-    if(ioctl(fd, UI_DEV_CREATE) < 0) {
-        return false;
-    }
-    
-    _isOpen = true;
-    return _isOpen;
+    return true;
 }
 
 void VirtualInput::closeDevice() {
-    if (_isOpen) {
-        ioctl(fd, UI_DEV_DESTROY);
-        close(fd);
-        
-        _isOpen = false;
+    if (mouseFd != 0 && mouseFd != -1) {
+        if ( close(mouseFd) != 0 ) {
+        }
     }
 }
 
-bool VirtualInput::isOpen() {
-    return _isOpen;
+
+bool VirtualInput::sendMouseEvent(const unsigned char type, const int Xvalue, const int Yvalue){
+    char * writeBuffer = (char *)::operator new(sizeof(char)+2*sizeof(int));
+    memcpy(writeBuffer,&type,sizeof(char));
+    memcpy(writeBuffer+sizeof(char),&Xvalue,sizeof(int));
+    memcpy(writeBuffer+sizeof(char)+sizeof(int),&Yvalue,sizeof(int));
+    if ( write(mouseFd,writeBuffer,sizeof(char)+2*sizeof(int)) != (sizeof(char)+2*sizeof(int)) ) {
+        delete writeBuffer;
+        return false;
+    }
+    delete writeBuffer;
+    return true;
 }
 
 void VirtualInput::move(int dy, int dx) {
-    memset(ev, 0, sizeof(ev));
-    
-    ev[0].type = EV_REL;
-    ev[0].code = REL_Y;
-    ev[0].value = dy;
-
-    ev[1].type = EV_REL;
-    ev[1].code = REL_X;
-    ev[1].value = dx;
-        
-    ev[2].type = EV_SYN;
-    ev[2].code = SYN_REPORT;
-    ev[2].value = 0;
-    
-    if(write(fd, &ev, sizeof(ev)) < 0)
-        throw std::runtime_error("Cannot move mouse");
+    if (!sendMouseEvent(EV_MOVE,dx,dy)){}
 }
 
 void VirtualInput::scroll(int val) {
-    memset(ev, 0, sizeof(ev));
-    
-    ev[0].type = EV_REL;
-    ev[0].code = REL_WHEEL;
-    ev[0].value = val;
-
-    ev[1].type = EV_SYN;
-    ev[1].code = SYN_REPORT;
-    ev[1].value = 0;
-    
-    if(write(fd, &ev, sizeof(struct input_event) * 2) < 0)
-        throw std::runtime_error("Cannot scroll mouse");
+    if (!sendMouseEvent(EV_SCROLL_VERT,val)){}
 }
 
 void VirtualInput::click(Button button) {
-    memset(ev, 0, sizeof(ev));
-    
-    ev[0].type = EV_KEY;
-    ev[0].code = (button == Button::LEFT) ? BTN_LEFT : BTN_RIGHT;
-    ev[0].value = 1;
-    
-    ev[1].type = EV_KEY;
-    ev[1].code = (button == Button::LEFT) ? BTN_LEFT : BTN_RIGHT;
-    ev[1].value = 0;
-    
-    ev[2].type = EV_SYN;
-    ev[2].code = SYN_REPORT;
-    ev[2].value = 0;
-    
-    if(write(fd, &ev, sizeof(ev)) < 0)
-        throw std::runtime_error("Cannot click mouse");
-}
-
-void VirtualInput::onKeyDown(jbyte key) {
-    memset(ev, 0, sizeof(ev));
-    
-    ev[0].type = EV_KEY;
-    ev[0].code = key;
-    ev[0].value = 1;
-    
-    ev[1].type = EV_SYN;
-    ev[1].code = SYN_REPORT;
-    ev[1].value = 0;
-    
-    if(write(fd, &ev, sizeof(struct input_event) * 2) < 0)
-        throw std::runtime_error("Cannot press down a key");
-}
-
-void VirtualInput::onKeyUp(jbyte key) {
-    memset(ev, 0, sizeof(ev));
-    
-    ev[0].type = EV_KEY;
-    ev[0].code = key;
-    ev[0].value = 0;
-    
-    ev[1].type = EV_SYN;
-    ev[1].code = SYN_REPORT;
-    ev[1].value = 0;
-    
-    if(write(fd, &ev, sizeof(struct input_event) * 2) < 0)
-        throw std::runtime_error("Cannot release a key");
+    switch (button){
+        case Button::LEFT: {
+            sendMouseEvent(EV_BTN_LEFT_PRESS);
+            sendMouseEvent(EV_BTN_LEFT_RELEASE);
+            break;
+        }
+        case Button::RIGHT: {
+            sendMouseEvent(EV_BTN_RIGHT_PRESS);
+            sendMouseEvent(EV_BTN_RIGHT_RELEASE);
+            break;
+        }
+    }
 }

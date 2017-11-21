@@ -1,0 +1,1 @@
+cmd_/home/pacman29/OS-droid-mouse/MouseDriver/avms.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/pacman29/OS-droid-mouse/MouseDriver/avms.ko /home/pacman29/OS-droid-mouse/MouseDriver/avms.o /home/pacman29/OS-droid-mouse/MouseDriver/avms.mod.o

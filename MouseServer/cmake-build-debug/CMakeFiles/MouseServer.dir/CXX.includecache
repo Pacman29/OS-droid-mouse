@@ -171,6 +171,8 @@ unistd.h
 -
 
 /home/pacman29/OS-droid-mouse/MouseServer/VirtualInput.cpp
+sys/stat.h
+-
 VirtualInput.h
 /home/pacman29/OS-droid-mouse/MouseServer/VirtualInput.h
 

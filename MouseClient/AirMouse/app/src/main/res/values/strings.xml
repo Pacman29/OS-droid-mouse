@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">AirMouse</string>
-    <string name="title_activity_air_mouse">AirMouse</string>
+    <string name="app_name">Mouse</string>
+    <string name="title_activity_air_mouse">Mouse</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
