@@ -36,7 +36,7 @@ void DiscoveryServer::startServer() {
     if (setsockopt(sock, IPPROTO_IP, IP_ADD_MEMBERSHIP, &mreq, sizeof(mreq)) < 0) {
         throw std::runtime_error("Cannot join multicast group");
     }
-    
+
     struct timeval tv;
     tv.tv_sec = 1;
     tv.tv_usec = 0;

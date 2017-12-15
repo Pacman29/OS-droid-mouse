@@ -14,6 +14,10 @@
                     android:id="@+id/item_connected_server_touchpad"
                     android:icon="@drawable/ic_menu_share"
                     android:title="TouchPad" />
+                <item
+                    android:id="@+id/item_connected_server_airremote"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="AirRemote" />
             </group>
         </menu>
     </item>

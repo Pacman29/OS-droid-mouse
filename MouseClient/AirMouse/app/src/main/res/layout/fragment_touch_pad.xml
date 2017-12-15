@@ -3,9 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/fragment_touch_pad"
-    tools:context="iu7.kurs.pacman29.mouse.TouchPadFragment">
+    tools:context="ru.iu7.pacman29.airmouse.TouchPadFragment">
 
-    <iu7.kurs.pacman29.mouse.view.TouchPadView
+    <ru.iu7.pacman29.airmouse.view.TouchPadView
         style="@style/TouchPad"
         android:tag="KEYBOARD_MANAGER"
         android:layout_width="match_parent"

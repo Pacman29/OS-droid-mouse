@@ -20,7 +20,7 @@ namespace Message {
     class Message {
     public:
         enum class Type {
-            KEEP_ALIVE, AUTHENTICATE, MOUSE_MOVE, MOUSE_CLICK, MOUSE_SCROLL, KEYDOWN, KEYUP, OTHER
+            KEEP_ALIVE, MOUSE_MOVE, MOUSE_CLICK, MOUSE_SCROLL, OTHER
         };
 
         Message(Message::Type type);

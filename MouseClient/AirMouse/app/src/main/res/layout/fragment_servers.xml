@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/fragment_servers"
-    tools:context="iu7.kurs.pacman29.mouse.ServersFragment">
+    tools:context="ru.iu7.pacman29.airmouse.ServersFragment">
 
     <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/swipe_refresh_layout"

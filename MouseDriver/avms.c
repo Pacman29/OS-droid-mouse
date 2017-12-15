@@ -32,9 +32,6 @@
 
 MODULE_LICENSE("GPL");
 
-// Uncomment to print debugging messages
-//#define AVMS_DEBUG
-
 struct input_dev *avms_input_dev;
 struct cdev *avms_cdev;
 dev_t avms_dev;
@@ -70,114 +67,43 @@ static ssize_t avms_write( struct file *filp, const char *buf, size_t count, lof
 	memcpy(&Xval,(write_buffer+sizeof(char)),sizeof(int));
 	memcpy(&Yval,(write_buffer+sizeof(char)+sizeof(int)),sizeof(int));
 
-#ifdef AVMS_DEBUG
-	printk("<3>avms: received: evType: %u, Xval: %d, Yval: %d\n",(unsigned int)evType,Xval,Yval);
-#endif
-
 	switch (evType) {
 
 	case EV_COORDS:
 		input_report_rel(avms_input_dev, REL_X, Xval);
-#ifdef AVMS_DEBUG
-		printk("<3>avms: Reporting relative x: %d\n",Xval);
-#endif
 		input_report_rel(avms_input_dev, REL_Y, Yval);
-#ifdef AVMS_DEBUG
-		printk("<3>avms: Reporting relative y: %d\n",Yval);
-#endif
 		input_sync(avms_input_dev);
-#ifdef AVMS_DEBUG
-		printk("<3>avms: Synced \n");
-#endif
 	break;
 
 	case EV_SCROLL_VERT:
 		input_report_rel(avms_input_dev, REL_WHEEL, Xval);
-#ifdef AVMS_DEBUG
-		printk("<3>avms: Reporting relative wheel: %d\n",Xval);
-#endif
 		input_sync(avms_input_dev);
-#ifdef AVMS_DEBUG
-		printk("<3>avms: Synced \n");
-#endif
 	break;
 
 	case EV_SCROLL_HORIZ:
 		input_report_rel(avms_input_dev, REL_HWHEEL, Xval);
-#ifdef AVMS_DEBUG
-		printk("<3>avms: Reporting relative horizontal wheel: %d\n",Xval);
-#endif
 		input_sync(avms_input_dev);
-#ifdef AVMS_DEBUG
-		printk("<3>avms: Synced \n");
-#endif
 	break;
 
 
 	case EV_BTN_LEFT_PRESS: // Report BTN_LEFT pressed
 		input_report_key(avms_input_dev, BTN_LEFT, 1);
-#ifdef AVMS_DEBUG
-		printk("<3>avms: Reporting BTN_LEFT, 1");
-#endif
 		input_sync(avms_input_dev);
-#ifdef AVMS_DEBUG
-		printk("<3>avms: Synced \n");
-#endif
 	break;
 
 	case EV_BTN_LEFT_RELEASE: // Report BTN_LEFT released
 		input_report_key(avms_input_dev, BTN_LEFT, 0);
-#ifdef AVMS_DEBUG
-		printk("<3>Reporting BTN_LEFT, 0");
-#endif
 		input_sync(avms_input_dev);
-#ifdef AVMS_DEBUG
-		printk("<3>avms: Synced \n");
-#endif
 	break;
 
 	case EV_BTN_RIGHT_PRESS: // Report BTN_RIGHT pressed
 		input_report_key(avms_input_dev, BTN_RIGHT, 1);
-#ifdef AVMS_DEBUG
-		printk("<3>avms: Reporting BTN_RIGHT, 1");
-#endif
 		input_sync(avms_input_dev);
-#ifdef AVMS_DEBUG
-		printk("<3>avms: Synced \n");
-#endif
 	break;
 
 	case EV_BTN_RIGHT_RELEASE: // Report BTN_RIGHT released
 		input_report_key(avms_input_dev, BTN_RIGHT, 0);
-#ifdef AVMS_DEBUG
-		printk("<3>avms: Reporting BTN_RIGHT, 0");
-#endif
 		input_sync(avms_input_dev);
-#ifdef AVMS_DEBUG
-		printk("<3>avms: Synced \n");
-#endif
-	break;
-
-	case EV_BTN_MIDDLE_PRESS: // Report BTN_MIDDLE pressed
-		input_report_key(avms_input_dev, BTN_MIDDLE, 1);
-#ifdef AVMS_DEBUG
-		printk("<3>avms: Reporting BTN_MIDDLE, 1");
-#endif
-		input_sync(avms_input_dev);
-#ifdef AVMS_DEBUG
-		printk("<3>avms: Synced \n");
-#endif
-	break;
-
-	case EV_BTN_MIDDLE_RELEASE: // Report BTN_MIDDLE released
-		input_report_key(avms_input_dev, BTN_MIDDLE, 0);
-#ifdef AVMS_DEBUG
-		printk("<3>avms: Reporting BTN_MIDDLE, 0");
-#endif
-		input_sync(avms_input_dev);
-#ifdef AVMS_DEBUG
-		printk("<3>avms: Synced \n");
-#endif
 	break;
 
 	default:
